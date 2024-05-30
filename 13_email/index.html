@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - email</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="mail_container">
+        <h2>메일 보내기</h2> 
+        <form id="contact-form">
+            <label>이름</label>
+            <input type="text" placeholder="이름" name="name" id="user_name">
+            <label>이메일</label>
+            <input type="email" placeholder="이메일" name="email" id="email">
+            <label>내용</label>
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="내용"></textarea>
+            <button type="submit">보내기</button>
+        </form>
+        </div>
+    </div>
+
+    <div class="dimm">
+        <i class="xi-spinner-3 xi-spin xi-3x"></i>
+    </div>
+
+    <div class="modal">
+        <span>🌠</span>
+        <p>성공</p>
+        <button class="cloes_btn">닫기</button>
+    </div>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init('x73pINGW8EIdaSgPC');
+   })();
+</script>
+<!-- (function(){})() 즉시실행 함수 -->
+
+<script src="./app.js"></script>
+</body>
+</html>
